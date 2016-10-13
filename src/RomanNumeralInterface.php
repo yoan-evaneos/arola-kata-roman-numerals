@@ -24,4 +24,8 @@ interface RomanNumeralInterface{
      * @return RomanNumeralInterface
      */
     public function getPreviousNumber();
+
+    public function getMinRange();
+
+    public function getMaxRange();
 }

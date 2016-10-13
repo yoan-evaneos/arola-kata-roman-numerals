@@ -26,7 +26,7 @@ class RomanNumeralFive implements RomanNumeralInterface
      */
     public function inRange($int)
     {
-        return $int >= 4 && $int <= 8;
+        return $int >= $this->getMinRange() && $int <= $this->getMaxRange();
     }
 
     /**
@@ -35,5 +35,21 @@ class RomanNumeralFive implements RomanNumeralInterface
     public function getPreviousNumber()
     {
         return new RomanNumeralOne();
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinRange()
+    {
+        return 4;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxRange()
+    {
+        return 8;
     }
 }

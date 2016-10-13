@@ -27,7 +27,7 @@ class RomanNumeralOne implements RomanNumeralInterface
      */
     public function inRange($int)
     {
-        return $int >= 1 && $int <= 3;
+        return $int >= $this->getMinRange() && $int <= $this->getMaxRange();
     }
 
     public function toInt()
@@ -41,5 +41,21 @@ class RomanNumeralOne implements RomanNumeralInterface
     public function getPreviousNumber()
     {
         throw new \LogicException();
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinRange()
+    {
+        return 1;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxRange()
+    {
+        return 3;
     }
 }

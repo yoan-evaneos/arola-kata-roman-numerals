@@ -21,7 +21,7 @@ class RomanNumeralFiveHundred implements RomanNumeralInterface
      */
     public function inRange($int)
     {
-        return $int >= 400 && $int <= 899;
+        return $int >= $this->getMinRange() && $int <= $this->getMaxRange();
     }
 
     /**
@@ -30,5 +30,21 @@ class RomanNumeralFiveHundred implements RomanNumeralInterface
     public function getPreviousNumber()
     {
         return new RomanNumeralHundred();
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinRange()
+    {
+        return 400;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxRange()
+    {
+        return 899;
     }
 }

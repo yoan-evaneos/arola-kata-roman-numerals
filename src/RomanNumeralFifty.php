@@ -27,7 +27,7 @@ class RomanNumeralFifty implements RomanNumeralInterface
      */
     public function inRange($int)
     {
-        return $int >= 40 && $int <= 89;
+        return $int >= $this->getMinRange() && $int <= $this->getMaxRange();
     }
 
     /**
@@ -36,5 +36,21 @@ class RomanNumeralFifty implements RomanNumeralInterface
     public function getPreviousNumber()
     {
         return new RomanNumeralTen();
+    }
+
+    /**
+     * @return int
+     */
+    public function getMinRange()
+    {
+        return 40;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaxRange()
+    {
+        return 89;
     }
 }

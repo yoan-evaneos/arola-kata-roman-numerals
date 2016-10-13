@@ -17,6 +17,13 @@ class RomanNumeral
      */
     public function __construct($numeral)
     {
+        if ($numeral === 0) {
+            throw new \InvalidArgumentException('0 is not allowed');
+        }
+        if ($numeral > 4999) {
+            throw new \InvalidArgumentException(sprintf('%s is not allowed. Max value : 4999', $numeral));
+        }
+
         $this->factory = new RomanNumeralFactory();
         $this->numeral = $numeral;
     }
@@ -30,9 +37,11 @@ class RomanNumeral
             $value = $this->factory->get($numeral);
             if($numeral < $value->getValue()) {
                 $result .= $value->getPreviousNumber()->toString();
+                $numeral -= $value->getMinRange();
+            } else {
+                $numeral -= $value->getValue();
             }
             $result .= $value->toString();
-            $numeral -= $value->getValue();
         }
         return $result;
     }
