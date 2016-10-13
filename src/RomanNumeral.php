@@ -4,7 +4,6 @@ namespace Arola\RomanNumerals;
 
 class RomanNumeral
 {
-
     /**
      * @var int
      */
@@ -28,7 +27,7 @@ class RomanNumeral
         } elseif ($this->numeral === 10) {
             return 'X';
         } else {
-            return 'U';
+            return 'C';
         }
     }
 }
