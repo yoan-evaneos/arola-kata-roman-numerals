@@ -1,13 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yoanhaouzi
- * Date: 13/10/2016
- * Time: 16:21
- */
 
 namespace Arola\Test\RomanNumerals;
 
+use Arola\RomanNumerals\RomanNumeral;
 
 class RomanNumeralsTest extends \PHPUnit_Framework_TestCase
 {
@@ -18,5 +13,13 @@ class RomanNumeralsTest extends \PHPUnit_Framework_TestCase
     public function testItShouldReturnOne() {
         $numeral = new RomanNumeral(1);
         $this->assertEquals('I', $numeral->toString());
+    }
+
+    /**
+     * @test
+     */
+    public function testItShouldReturnFive() {
+        $numeral = new RomanNumeral(5);
+        $this->assertEquals('V', $numeral->toString());
     }
 }
