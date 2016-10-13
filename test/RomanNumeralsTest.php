@@ -34,6 +34,15 @@ class RomanNumeralsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('X', $numeral->toString());
     }
 
+    /**
+     * @test
+     */
+    public function testItShouldReturn4888()
+    {
+        $numeral = new RomanNumeral(4888);
+        $this->assertEquals('MMMMDCCCLXXXVIII', $numeral->toString());
+    }
+
     /*
      * @test
      */
