@@ -25,8 +25,10 @@ class RomanNumeral
             return 'I';
         } else if ($this->numeral === 5) {
             return 'V';
-        } else {
+        } elseif ($this->numeral === 10) {
             return 'X';
+        } else {
+            return 'U';
         }
     }
 }
