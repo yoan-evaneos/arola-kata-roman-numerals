@@ -4,12 +4,27 @@ namespace Arola\RomanNumerals;
 
 class RomanNumeral
 {
-    public function __construct($int)
+
+    /**
+     * @var int
+     */
+    private $numeral;
+
+    /**
+     * RomanNumeral constructor.
+     * @param int $numeral
+     */
+    public function __construct($numeral)
     {
+        $this->numeral = $numeral;
     }
 
     public function toString()
     {
-        return 'I';
+        if ($this->numeral === 1) {
+            return 'I';
+        } else {
+            return 'V';
+        }
     }
 }
