@@ -30,4 +30,12 @@ class RomanNumeralsTest extends \PHPUnit_Framework_TestCase
         $numeral = new RomanNumeral(10);
         $this->assertEquals('X', $numeral->toString());
     }
+
+    /**
+     * @test
+     */
+    public function testItShouldReturnFour() {
+        $numeral = new RomanNumeral(4);
+        $this->assertEquals('IV', $numeral->toString());
+    }
 }
