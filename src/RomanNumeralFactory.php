@@ -14,6 +14,12 @@ class RomanNumeralFactory
     public function __construct() {
         $this->romanNumerals = [
             new RomanNumeralOne(),
+            new RomanNumeralFive(),
+            new RomanNumeralTen(),
+            new RomanNumeralFifty(),
+            new RomanNumeralHundred(),
+            new RomanNumeralFiveHundred(),
+            new RomanNumeralThousand(),
         ];
     }
 
