@@ -29,4 +29,17 @@ class RomanNumeralOne implements RomanNumeralInterface
     {
         return $int >= 1 && $int <= 3;
     }
+
+    public function toInt()
+    {
+        // TODO: Implement toInt() method.
+    }
+
+    /**
+     * @return RomanNumeralInterface
+     */
+    public function getPreviousNumber()
+    {
+        throw new \LogicException();
+    }
 }

@@ -28,6 +28,9 @@ class RomanNumeral
         while ($numeral > 0) {
             /** @var RomanNumeralInterface $value */
             $value = $this->factory->get($numeral);
+            if($numeral < $value->getValue()) {
+                $result .= $value->getPreviousNumber()->toString();
+            }
             $result .= $value->toString();
             $numeral -= $value->getValue();
         }

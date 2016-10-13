@@ -29,4 +29,12 @@ class RomanNumeralFifty implements RomanNumeralInterface
     {
         return $int >= 40 && $int <= 89;
     }
+
+    /**
+     * @return RomanNumeralInterface
+     */
+    public function getPreviousNumber()
+    {
+        return new RomanNumeralTen();
+    }
 }

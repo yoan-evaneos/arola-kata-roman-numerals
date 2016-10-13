@@ -27,6 +27,14 @@ class RomanNumeralTen implements RomanNumeralInterface
      */
     public function inRange($int)
     {
-        return $int >= 9 && $int <= 49;
+        return $int >= 9 && $int <= 39;
+    }
+
+    /**
+     * @return RomanNumeralInterface
+     */
+    public function getPreviousNumber()
+    {
+        return new RomanNumeralFive();
     }
 }

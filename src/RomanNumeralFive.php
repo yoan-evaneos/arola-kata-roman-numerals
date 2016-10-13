@@ -11,7 +11,6 @@ namespace Arola\RomanNumerals;
 
 class RomanNumeralFive implements RomanNumeralInterface
 {
-
     public function getValue() {
         return 5;
     }
@@ -28,5 +27,13 @@ class RomanNumeralFive implements RomanNumeralInterface
     public function inRange($int)
     {
         return $int >= 4 && $int <= 8;
+    }
+
+    /**
+     * @return RomanNumeralInterface
+     */
+    public function getPreviousNumber()
+    {
+        return new RomanNumeralOne();
     }
 }

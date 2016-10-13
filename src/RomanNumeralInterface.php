@@ -19,4 +19,9 @@ interface RomanNumeralInterface{
     public function getValue();
 
     public function toString();
+
+    /**
+     * @return RomanNumeralInterface
+     */
+    public function getPreviousNumber();
 }
